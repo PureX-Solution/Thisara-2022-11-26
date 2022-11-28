@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="left">
+            <h3>New National <span>Rentals</span> <br></h3>
+            
+            <ul>
+                <li>Dashboard</li>
+                <li>Customer Management</li>
+                <li>Worker Management</li>
+                <li>Equipment Management</li>
+                <li>Approved</li>
+                <li>Log Out</li>
+
+            </ul>
+        </div><!--left-->
+
+        <div id="right">
+            <div class="dashboard">
+                <h1>Dashboard</h1>
+
+                <div class="statusCard">
+                    <div class="card">
+                        <p>Total Order</p>
+                        <h1>28</h1>
+                    </div>
+                    
+                    <div class="card">
+                        <p>Total Order</p>
+                        <h1>28</h1>
+                    </div>
+                    
+                    <div class="card">
+                        <p>Total Order</p>
+                        <h1>28</h1>
+                    </div>
+                    
+                    <div class="card">
+                        <p>Total Order</p>
+                        <h1>28</h1>
+                    </div>
+
+                </div>
+            </div><!--Dashboard-->
+
+            <div class="customer-management" id="customer-management">
+                <h1>Customer Management</h1>
+
+                <div class="search">
+                    <p>Search ID  </p>
+                    <input type="text" onchange="searching()" placeholder="Enter Customer ID">
+                    <button>Search</button>
+                </div>
+
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Details</th>
+                        </tr>
+
+
+                        <tr  style="">
+                            <td>1</td>
+                            <td>Ushan</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        
+                        
+                    </table>
+                </div>
+            </div><!--customer-management-->
+        </div><!--right-->
+    </main>
+
+<script>
+    function searching(){
+        console.log("changing...");
+    }
+</script>
+</body>
+</html>
