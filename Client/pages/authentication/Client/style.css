@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #eee solid;
+  overflow-x: hidden;
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./img/img1.jpg);
+}
+
+.mainCard {
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.left {
+  width: 350px;
+  background-image: url("./img//1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.left img {
+  width: 100%;
+}
+
+.right {
+  width: auto;
+  background-color: rgb(255, 255, 255);
+}
+.right .title {
+  color: rgb(36, 36, 36);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 30px;
+  padding-top: 10px;
+}
+.right form {
+  padding: 50px;
+}
+.right form label {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.right form input[type=email] {
+  margin-bottom: 20px;
+}
+.right form input[type=password],
+.right form input[type=email] {
+  background-color: #fff;
+  border: 1px rgb(202, 202, 202) solid;
+  padding: 10px;
+  border-radius: 4px;
+  width: 200px;
+}
+.right form .forget-password {
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  font-size: 13px;
+  margin-top: 7px;
+}
+.right form button {
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 7px;
+  background-color: rgb(255, 153, 0);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  margin-top: 0px;
+  transition: 0.2s ease-in-out;
+}
+.right form button:hover {
+  background-color: blueviolet;
+}
+.right form .signUpLink {
+  color: rgb(54, 54, 54);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signUpContainer {
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./img/img1.jpg);
+}
+.signUpContainer .mainCard {
+  border: 1px #eee solid;
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+.signUpContainer .mainCard .right h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 40px;
+}
+.signUpContainer .mainCard .right form {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.signUpContainer .mainCard .right form input[type=password],
+.signUpContainer .mainCard .right form input[type=text],
+.signUpContainer .mainCard .right form input[type=address],
+.signUpContainer .mainCard .right form input[type=tel],
+.signUpContainer .mainCard .right form input[type=email] {
+  background-color: #fff;
+  border: 1px rgb(202, 202, 202) solid;
+  padding: 10px;
+  border-radius: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.signUpContainer .mainCard .right form input[type=address] {
+  width: 384px;
+}
+.signUpContainer .mainCard .right form label {
+  margin-top: 5px;
+  font-weight: 500;
+}
+.signUpContainer .mainCard .right form table td {
+  padding: 5px;
+}
+.signUpContainer .mainCard .right form table .agreeCheck {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.signUpContainer .mainCard .right form table .agreeCheck input {
+  font-size: 17px;
+}
+.signUpContainer .mainCard .right form table .agreeCheck span {
+  color: rgb(34, 34, 34);
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+form span {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */

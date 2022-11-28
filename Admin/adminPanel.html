@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="./assets/images/logo.png" rel="icon"/>
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+    <!----------------------------------------
+    ------------------------------------------
+    --------------Header Section--------------
+    ------------------------------------------
+    ------------------------------------------>
+
+    <section class="header">
+
+        <div class="logo">
+            <h2>New National<span> Rentals</span></h2>
+        </div>
+        <div class="search--notification--profile">
+
+            <div class="notification--profile">
+                <a href="#">
+                    <img class="notification icon" src="assets/images/notification.png" id="image2">
+                </a>
+
+                <div class="picon profile">
+                    <img src="assets/images/profile.jpg" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!----------------------------------------
+    -------------------------------------------
+    ------------------sidebar------------------
+    -------------------------------------------
+    -------------------------------------------->
+
+    <section class="main">
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="#Dashbord" id="">
+                        <span class="icon icon-1"><i class="fa-sharp fa-solid fa-house"></i></span>
+                        <span class="sidebar--item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Customer Management" id="">
+                        <span class="icon icon-1"><i class="fas fa-user-alt"></i></span>
+                        <span class="sidebar--item">Customer Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Worker Management" id="">
+                        <span class="icon icon-1"><i class="fas fa-users"></i></span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Worker Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Equipment Management" id="">
+                        <span class="icon icon-1"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                        <span class="sidebar--item">Equipment Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Worker approval" id="">
+                        <span class="icon icon-1"><i class="fa-solid fa-person-circle-check"></i></span>
+                        <span class="sidebar--item">Approval</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="">
+                        <span class="icon icon-1"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar--bottom-items">
+            </ul>
+        </div>
+
+        <div class="main--content">
+
+            <!-----------------------------------------
+            -------------------------------------------
+            -----------------Dashboard-----------------
+            -------------------------------------------
+            -------------------------------------------->
+
+            <div>
+                <div class="title" id="Dashbord">
+                    <h2 class="section--title">Dashboard</h2>
+                    <div class="Dashboard--right--btns">
+                    </div>
+                </div>
+                <div  class="Dashboard">
+                <div class="Dashboard--cards">
+                    <div class="Dashboard--card">
+                        <p class="free">Total Order</p>
+                        <p class="Total-Order">28</p>
+                    </div>
+
+                    <div class="Dashboard--card">
+                        <p class="scheduled">Total User</p>
+                        <p class="Total-User">28</p>
+                    </div>
+
+                    <div class="Dashboard--card">
+                        <p class="scheduled">Total Workers</p>
+                        <p class="Total-Workers">28</p>
+                    </div>
+
+                    <div class="Dashboard--card">
+                        <p class="scheduled">Total Equipment</p>
+                        <p class="Total-Equipment">28</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!----------------------------------------
+            -------------------------------------------
+            ------------Customer Managemenet-----------
+            -------------------------------------------
+            -------------------------------------------->
+
+            <div>
+                <div class="title" id="Customer Management">
+                    <h2 class="section--title">Customer Management <a href="#"><img class="img1" src="./assets/images/plus.png" id="image1"></a></h2>
+                    <div class="Customer--right--btns">
+                    </div>
+                </div>
+                    <!--------------------Filter Section---------------------->
+                    <table border="1" class="customer-filter-table">
+                        <tr>
+                            <td class="filterCustomerId" id="filterCustomerId">
+                                <label for="Id">Search a ID:</label>
+                                <input type="text" name="serach" placeholder="Customer ID">
+                            </td>
+
+                            <td class="searchPosition" id="searchPosition">
+                                <label for="Position">Choose a Position:</label>
+                                <select id="Position" name="Position">
+                                    <option value="Position1">Position 1</option>
+                                    <option value="Position2">Position 2</option>
+                                    <option value="Position3">Position 3</option>
+                                    <option value="Position4">Position 4</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button id="search">Search</button>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <!-----------------------customer table------------------------------------>
+                <div  class="Customer-table">
+                    <table class="table" id="employee">
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td id="id1">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click01()"></a></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+
+            <!-----------------------------------------
+            -------------------------------------------
+            --------------Worker Managemenet-----------
+            -------------------------------------------
+            -------------------------------------------->
+
+            <div>
+                <div class="title" id="Worker Management">
+                    <h2 class="section--title">Worker Management <a href="#"><img class="img2" src="./assets/images/plus.png" id="image2"></a></h2>
+                    <div class="Worker--right--btns">
+                    </div>
+                </div>
+
+                    <!--------------------Filter Section---------------------->
+                    <table border="1" class="worker-filter-table">
+                        <tr>
+                            <td class="filterWorkerId" id="filterWorkerId">
+                                <label for="Id">Search a ID:</label>
+                                <input type="text" name="serach" placeholder="Worker ID">
+                            </td>
+
+                            <td class="searchWorkerType" id="searchWorkerType">
+                                <label for="WorkerType">Choose a Worker Type:</label>
+                                <select id="WorkerType" name="WorkerType">
+                                    <option value="WorkerType1">Worker Type 1</option>
+                                    <option value="WorkerType2">Worker Type 2</option>
+                                    <option value="WorkerType3">Worker Type 3</option>
+                                    <option value="WorkerType4">Worker Type 4</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button id="search">Search</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!----------------------------Worker table------------------------------------>
+
+                <div  class="Worker-table">
+                    <table class="table" id="worker">
+                        <tr>
+                            <th>Worker ID</th>
+                            <th>Name</th>
+                            <th>Work Type</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td id="id11">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click11()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id12">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click12()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id13">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click13()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id14">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click14()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id15">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click15()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id16">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click16()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id17">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click117()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id18">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click18()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id19">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click19()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id20">M0013</td>
+                            <td>Sugath</td>
+                            <td>MASSON</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click20()"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-----------------------------------------
+            -------------------------------------------
+            -----------Equipment Managemenet-----------
+            -------------------------------------------
+            -------------------------------------------->
+
+            <div>
+                <div class="title" id="Equipment Management">
+                    <h2 class="section--title">Equipment Management <a href="#"><img class="img3" src="./assets/images/tool.png" id="image3"></a></h2>
+                    <div class="Equipment--right--btns">
+                    </div>
+                </div>
+
+                    <!--------------------Filter Section---------------------->
+                    <table border="1" class="equipment-filter-table">
+                        <tr>
+                            <td class="EquipmentId" id="EquipmentId">
+                                <label for="Id">Search a ID:</label>
+                                <input type="text" name="serach" placeholder="Equipment ID">
+                            </td>
+
+                            <td class="searcEquipmentCategory" id="searcEquipmentCategory">
+                                <label for="EquipmentCategory">Choose a Equipment Category:</label>
+                                <select id="EquipmentCategory" name="EquipmentCategory">
+                                    <option value="EquipmentCategory1">Equipment Category 1</option>
+                                    <option value="EquipmentCategory2">Equipment Category 2</option>
+                                    <option value="EquipmentCategory3">Equipment Category 3</option>
+                                    <option value="EquipmentCategory4">Equipment Category 4</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button id="search">Search</button>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!----------------------------Equipment table------------------------------------>
+
+                <div  class="Equipment-table">
+                    <table class="table" id="Equipment">
+                        <tr>
+                            <th>ID</th>
+                            <th>Equipment Name</th>
+                            <th>Equipment Category</th>
+                            <th>Equipment Quantity</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                            <td id="id21">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="####"><input type="submit" value="View" onclick="click21()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id22">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click22()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id23">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click23()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id24">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click24()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id25">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click25()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id26">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click26()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id27">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click27()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id28">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click28()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id29">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click29()"></a></td>
+                        </tr>
+                        <tr>
+                            <td id="id30">M0013</td>
+                            <td>Weelbarrow</td>
+                            <td>Category 1</td>
+                            <td>10</td>
+                            <td><a href="###"><input type="submit" value="View" onclick="click30()"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-----------------------------------------
+            -------------------------------------------
+            --------------Worker approval--------------
+            -------------------------------------------
+            -------------------------------------------->
+            
+            <div>
+                <div class="title" id="Worker approval">
+                    <h2 class="section--title">Worker approval</h2>
+                    <div class="Worker-approval--right--btns">
+                    </div>
+                </div>
+
+                    <!----------------------------Worker approval table------------------------------------>
+
+                <div  class="Worker-approval-table">
+                    <table class="table" id="Worker-approval">
+                        <tr>
+                            <th>Worker ID</th>
+                            <th>Worker Name</th>
+                            <th>Customer Name</th>
+                            <th>Dates</th>
+                            <th>Approval</th>
+                        </tr>
+                        <tr>
+                            <td id="id31">M0013</td>
+                            <td>Saman</td>
+                            <td>Kamal</td>
+                            <td>10</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click31()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click31()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="id32">M0013</td>
+                            <td>Saman</td>
+                            <td>Kamal</td>
+                            <td>10</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click32()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click32()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="id33">M0013</td>
+                            <td>Saman</td>
+                            <td>Kamal</td>
+                            <td>10</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click33()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click33()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="id33">M0013</td>
+                            <td>Saman</td>
+                            <td>Kamal</td>
+                            <td>10</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click33()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click33()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-----------------------------------------
+            -------------------------------------------
+            --------------Item approval----------------
+            -------------------------------------------
+            -------------------------------------------->
+            
+            <div>
+                <div class="title" id="Item approval">
+                    <h2 class="section--title">Item approval</h2>
+                    <div class="Worker-approval--right--btns">
+                    </div>
+                </div>
+
+                    <!----------------------------Item approval table------------------------------------>
+
+                <div  class="Item-approval-table">
+                    <table class="table" id="Item-approval">
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Customer Name</th>
+                            <th>Dates</th>
+                            <th>Item Quantity</th>
+                            <th>Price</th>
+                            <th>Approval</th>
+                        </tr>
+                        <tr>
+                            <td id="id34">Weelbarrow</td>
+                            <td>Saman</td>
+                            <td>10</td>
+                            <td>05</td>
+                            <td>Rs 100.00</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click34()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click34()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="id35">Weelbarrow</td>
+                            <td>Saman</td>
+                            <td>10</td>
+                            <td>05</td>
+                            <td>Rs 100.00</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click35()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click35()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="id36">Weelbarrow</td>
+                            <td>Saman</td>
+                            <td>10</td>
+                            <td>05</td>
+                            <td>Rs 100.00</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click36()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click31()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="id31">Weelbarrow</td>
+                            <td>Saman</td>
+                            <td>10</td>
+                            <td>05</td>
+                            <td>Rs 100.00</td>
+                            <td>
+                                <span>
+                                    <a href="####"><input type="submit" value="Approval" onclick="click31()"></a>
+                                </span>
+                                <span>
+                                    <a href="####"><input type="submit" value="Reject" onclick="click31()"></a>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
