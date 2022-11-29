@@ -1,3 +1,5 @@
+<?php require './components/connection.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,18 +13,18 @@
             <h3>New National <span>Rentals</span> <br></h3>
             
             <ul>
-                <li><span class="navigation_icon"><i class="fa-solid fa-gauge"></i></span> Dashboard</li>
-                <li><span class="navigation_icon"><i class="fa-solid fa-user"></i></span>Customer Management</li>
-                <li><span class="navigation_icon"><i class="fa-solid fa-users"></i></span>Worker Management</li>
-                <li><span class="navigation_icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>Equipment Management</li>
-                <li><span class="navigation_icon"><i class="fa-solid fa-person-circle-check"></i></span>Approval</li>
-                <li><span class="navigation_icon"><i class="fa-solid fa-right-from-bracket"></i></span>Log Out</li>
+                <a href="#dashboard"><span class="navigation_icon"><i class="fa-solid fa-gauge"></i></span> Dashboard</a>
+                <a href="#customer-management"><span class="navigation_icon"><i class="fa-solid fa-user"></i></span>Customer Management</a>
+                <a href="#worker-management"><span class="navigation_icon"><i class="fa-solid fa-users"></i></span>Worker Management</a>
+                <a href="#equipment-management"><span class="navigation_icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>Equipment Management</a>
+                <a href="#approved"><span class="navigation_icon"><i class="fa-solid fa-person-circle-check"></i></span>Approval</a>
+                <a href="#"><span class="navigation_icon"><i class="fa-solid fa-right-from-bracket"></i></span>Log Out</a>
 
             </ul>
         </div><!--left-->
 
         <div id="right">
-            <div class="dashboard">
+            <div class="dashboard" id="dashboard">
                 <h1>Dashboard</h1>
 
                 <div class="statusCard">
@@ -49,13 +51,14 @@
                 </div>
             </div><!--Dashboard-->
 
+
             <div class="customer-management" id="customer-management">
                 <h1>Customer Management</h1>
 
                 <div class="search">
                     <p>Search ID  </p>
-                    <input type="text" id="customer_management_id" placeholder="Enter Customer ID">
-                    <button onclick="customer_management_searching()">Search</button>
+                    <input type="text" id="customer_management_input" placeholder="Enter Customer ID">
+                    <!-- <button onclick="customer_management_searching()">Search</button> -->
                 </div>
 
                 <div class="table">
@@ -66,65 +69,35 @@
                             <th>Phone Number</th>
                             <th>Details</th>
                         </tr>
+                        
+
+                        <?php
+                            $sql = "SELECT * FROM customers";
+                            $result = mysqli_query($con, $sql);
 
 
-                        <tr class="" id="">
-                            <td>1</td>
-                            <td>Ushan</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        <tr class="" id="">
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        
-                        
+                            if($result){
+                                while ($record = mysqli_fetch_assoc($result)){
+
+                            ?>
+
+
+                            <tr class="customerClass <?php echo $record['c_id'] ?>" id="<?php echo $record['c_id'] ?>">
+
+                                <td><?php echo $record['c_id'] ?></td>
+                                <td><?php echo $record['c_fName'] ?></td>
+                                <td><?php echo $record['c_contact_number'] ?></td>
+                                <td><button>View</button></td>
+
+                            </tr>
+                                
+                            <?php
+
+                                }
+                            }
+
+                            ?>
+                
                     </table>
                 </div>
             </div><!--customer-management-->
@@ -134,8 +107,8 @@
 
                 <div class="search">
                     <p>Search ID  </p>
-                    <input type="text" id="customer_management_id" placeholder="Enter Customer ID">
-                    <button onclick="">Search</button>
+                    <input type="text" id="worker_management_input" placeholder="Enter Worker ID">
+                    <!-- <button onclick="">Search</button> -->
                 </div>
 
                 <div class="table">
@@ -147,33 +120,50 @@
                             <th>Details</th>
                         </tr>
 
+                        <?php
+                            $sql = "SELECT * FROM workers";
+                            $result = mysqli_query($con, $sql);
 
-                        <tr>
-                            <td>1</td>
-                            <td>Ushan</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        
-                        <tr>
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
-                        
-                        
+
+                            if($result){
+                                while ($record = mysqli_fetch_assoc($result)){
+
+                            ?>
+
+
+                            <tr class="workerClass <?php echo $record['w_id'] ?>" id="<?php echo $record['w_id'] ?>">
+
+                                <td><?php echo $record['w_id'] ?></td>
+                                <td><?php echo $record['w_name'] ?></td>
+                                <td><?php echo $record['w_contact_number'] ?></td>
+                                <td><button>View</button></td>
+
+                            </tr>
+                                
+                            <?php
+
+                                }
+                            }
+
+                            ?>
                     </table>
                 </div>
             </div><!--worker-management-->
             
+
             <div class="equipment-management" id="equipment-management">
                 <h1>Equipment Management</h1>
 
                 <div class="search">
-                    <p>Search ID  </p>
-                    <input type="text" id="customer_management_id" placeholder="Enter Customer ID">
-                    <button onclick="">Search</button>
+                    <p>Select Category  </p>
+                    <!-- <input type="text" id="equipment_management_input" placeholder="Enter Equipment ID"> -->
+                    <select id="equipment_management_input">
+                        <option value="all">All</option>
+                        <option value="Power Tools">Power Tools</option>
+                        <option value="Portable Machines">Portable Machines</option>
+                        <option value="Construction Equipme">Construction Equipment</option>
+                    </select>
+                    <!-- <button onclick="">Search</button> -->
                 </div>
 
                 <div class="table">
@@ -183,25 +173,38 @@
                             <th>Equipment Name</th>
                             <th>Category</th>
                             <th>Quantity</th>
+                            <th>Available</th>
                             <th>Details</th>
                         </tr>
-
-
-                        <tr>
-                            <td>1</td>
-                            <td>Ushan</td>
-                            <td>0716654153</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
                         
-                        <tr>
-                            <td>2</td>
-                            <td>Akila</td>
-                            <td>0716654153</td>
-                            <td>0716654153</td>
-                            <td><button>View</button></td>
-                        </tr>
+                        <?php
+                            $sql = "SELECT * FROM equipments";
+                            $result = mysqli_query($con, $sql);
+
+
+                            if($result){
+                                while ($record = mysqli_fetch_assoc($result)){
+
+                            ?>
+
+
+                            <tr class="equipmentClass <?php echo $record['e_type'] ?>" id="<?php echo $record['e_id'] ?>">
+
+                                <td><?php echo $record['e_id'] ?></td>
+                                <td><?php echo $record['e_name'] ?></td>
+                                <td><?php echo $record['e_type'] ?></td>
+                                <td><?php echo $record['e_qty'] ?></td>
+                                <td><?php echo $record['available_count'] ?></td>
+                                <td><button>View</button></td>
+
+                            </tr>
+                                
+                            <?php
+
+                                }
+                            }
+
+                            ?>
                         
                         
                     </table>
@@ -264,15 +267,6 @@
         </div><!--right-->
     </main>
 
-<script>
-    function customer_management_searching(){
-        let data = document.getElementById("customer_management_id").value;
-        let className = document.getElementsByClassName('customer_management');
-        for(let index = 0; index < className.length; index++){
-            if(className[index] )
-            className[index].style = "display : none;";  
-        }          
-    }
-</script>
+<script src="./main.js"></script>
 </body>
 </html>

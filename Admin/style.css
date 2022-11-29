@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
+  transition: 0.3s ease all;
 }
 
 /* width */
@@ -66,7 +68,7 @@ main {
   justify-content: center;
   box-sizing: border-box;
 }
-#left ul li {
+#left ul a {
   display: flex;
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
@@ -82,11 +84,11 @@ main {
   transition: 0.2s ease all;
   font-weight: bold;
 }
-#left ul li span {
+#left ul a span {
   padding-right: 15px;
   font-size: 17px;
 }
-#left ul li:hover {
+#left ul a:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(44, 44, 44);
 }
@@ -159,10 +161,15 @@ main {
   padding: 10px 5px;
   border: none;
   background-color: rgb(197, 197, 197);
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   font-size: 15px;
   color: rgb(37, 37, 37);
   font-weight: 700;
+}
+#right .customer-management .search select, #right .worker-management .search select, #right .equipment-management .search select, #right .approved .search select {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 5px;
 }
 #right .customer-management .search button, #right .worker-management .search button, #right .equipment-management .search button, #right .approved .search button {
   padding: 10px 7px;
