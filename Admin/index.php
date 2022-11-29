@@ -42,23 +42,49 @@ if(!isset($_SESSION['email'])){
 
                 <div class="statusCard">
                     <div class="card">
+                        <?php
+                            $sql1 = "SELECT * FROM sell_item";
+                            $result1 = mysqli_query($con, $sql1);
+                            $count1 = mysqli_num_rows($result1);
+                            
+                            $sql2 = "SELECT * FROM sell_worker";
+                            $result2 = mysqli_query($con, $sql2);
+                            $count2 = mysqli_num_rows($result2);
+
+                            $total = $count1 + $count2;
+                        ?>
                         <p>Total Order</p>
-                        <h1>28</h1>
+                        <h1><?php echo $total ?></h1>
                     </div>
                     
                     <div class="card">
-                        <p>Total Order</p>
-                        <h1>28</h1>
+                        <?php
+                            $sql = "SELECT * FROM customers";
+                            $result = mysqli_query($con, $sql);
+                            $count = mysqli_num_rows($result);
+                        ?>
+                        <p>Total Customer</p>
+                        <h1><?php echo $count ?></h1>
                     </div>
                     
                     <div class="card">
-                        <p>Total Order</p>
-                        <h1>28</h1>
+                        <?php
+                            $sql = "SELECT * FROM workers";
+                            $result = mysqli_query($con, $sql);
+                            $count = mysqli_num_rows($result);
+                        ?>
+                        <p>Total Workers</p>
+                        <h1><?php echo $count ?></h1>
                     </div>
                     
                     <div class="card">
-                        <p>Total Order</p>
-                        <h1>28</h1>
+                        <?php
+                            $sql = "SELECT * FROM equipments";
+                            $result = mysqli_query($con, $sql);
+                            $count = mysqli_num_rows($result);
+                        ?>
+                        <p>Total Equipment</p>
+                        <h1><?php echo $count ?></h1>
                     </div>
 
                 </div>
@@ -120,7 +146,7 @@ if(!isset($_SESSION['email'])){
             </div><!--customer-management-->
             
             <div class="worker-management" id="worker-management">
-                <h1>Worker Management</h1>
+                <h1>Worker Management <a href="./components/manage_worker.php"><i class="fa-solid fa-square-plus" style="color: #68B984; cursor:pointer"></i></a></h1>
 
                 <div class="search">
                     <p>Search ID  </p>
@@ -284,7 +310,7 @@ if(!isset($_SESSION['email'])){
                                         echo "<td>{$worker_record['w_name']}</td>";
                                         echo "<td>{$customer_record['c_fName']}</td>";
                                         echo "<td>{$record_sell_worker['how_many_date']}</td>";
-                                        echo "<td><button style='background-color: rgb(105, 216, 105);'>Approved</button><button style='background-color: rgb(196, 51, 51);'>Reject</button></td>";
+                                        echo "<td><a href='./components/worker_approve.php?id={$record_sell_worker['id']}&command=Approved&worker_id={$worker_record['w_id']}'><button style='background-color: rgb(105, 216, 105);'>Approved</button></a><a href='./components/worker_approve.php?id={$record_sell_worker['id']}&command=Reject&worker_id={$worker_record['w_id']}'><button style='background-color: rgb(196, 51, 51);'>Reject</button></a></td>";
                                     echo "</tr>";
 
                                 }
@@ -305,7 +331,7 @@ if(!isset($_SESSION['email'])){
                         <tr>
                             <th>Equipment ID</th>
                             <th>Equipment Name</th>
-                            <th>Customer Name</th>
+                            <th>Customer ID</th>
                             <th>Dates</th>
                             <th>Equipment Qty</th>
                             <th>Price</th>
@@ -335,11 +361,11 @@ if(!isset($_SESSION['email'])){
                                     echo "<tr>";
                                         echo "<td>{$item_record['e_id']}</td>";
                                         echo "<td>{$item_record['e_name']}</td>";
-                                        echo "<td>{$customer_record['c_fName']}</td>";
+                                        echo "<td>{$customer_record['c_id']}</td>";
                                         echo "<td>{$record_sell_item['How_many_date']}</td>";
                                         echo "<td>{$record_sell_item['item_qty']}</td>";
                                         echo "<td>{$record_sell_item['total_price']}</td>";
-                                        echo "<td><button style='background-color: rgb(105, 216, 105);'>Approved</button><button style='background-color: rgb(196, 51, 51);'>Reject</button></td>";
+                                        echo "<td><a href='./components/item_approve.php?id={$record_sell_item['id']}&command=Approved&item_id={$item_record['e_id']}'><button style='background-color: rgb(105, 216, 105);'>Approved</button></a><a href='./components/item_approve.php?id={$record_sell_item['id']}&command=Reject&item_id={$item_record['e_id']}'><button style='background-color: rgb(196, 51, 51);'>Reject</button></a></td>";
                                     echo "</tr>";
                                 }
                             }
@@ -357,7 +383,7 @@ if(!isset($_SESSION['email'])){
             </div>
 
             <div class="title">
-                <h1 id="title">This is Title</h1>
+                <h1 id="title">Details</h1>
             </div><!--title-->
 
             <div class="detail">

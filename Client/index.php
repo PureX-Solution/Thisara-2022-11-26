@@ -171,7 +171,7 @@ session_start();
                   }
 
                   if($record1['approval'] === 'Approved' or $record1['approval'] === 'Compleat'){
-                    echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px;'><a href='' style='width: fit-content'><i class='bi bi-file-earmark-excel-fill' style='font-size:20px; cursor:pointer; color: gray'></i></td>";
+                    echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px;'><a href='#' style='width: fit-content'><i class='bi bi-file-earmark-excel-fill' style='font-size:20px; cursor:pointer; color: gray'></i></td>";
                   }
                   else{
                     echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px;'><a href='./components/item_remove_cart.php?howManyItem={$record1['item_qty']}&cart_id={$record1['id']}&e_id={$record1['item_id']}&presentAvailableCount={$record2['available_count']}' style='width: fit-content'><i class='bi bi-file-earmark-excel-fill' style='font-size:20px; cursor:pointer; color: red'></i></a></td>";
@@ -213,7 +213,7 @@ session_start();
                   }
 
                   if($record1['approval'] === 'Approved' or $record1['approval'] === 'Compleat'){
-                    echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px;'><a href='' style='width: fit-content'><i class='bi bi-file-earmark-excel-fill' style='font-size:20px; cursor:pointer; color: gray'></i></td>";
+                    echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px;'><a href='#' style='width: fit-content'><i class='bi bi-file-earmark-excel-fill' style='font-size:20px; cursor:pointer; color: gray'></i></td>";
                   }
                   else{
                     echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px;'><a href='./components/workers_remove_cart.php?cart_id={$record1['id']}&w_id={$record2['w_id']}' style='width: fit-content'><i class='bi bi-file-earmark-excel-fill' style='font-size:20px; cursor:pointer; color: red'></i></a></td>";
