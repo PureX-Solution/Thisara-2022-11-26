@@ -74,13 +74,17 @@ main {
   font-size: 16px;
   margin: 5px;
   padding: 5px 15px;
-  height: 60px;
+  height: 50px;
   align-items: center;
   border-radius: 7px;
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease all;
   font-weight: bold;
+}
+#left ul li span {
+  padding-right: 15px;
+  font-size: 17px;
 }
 #left ul li:hover {
   background-color: rgb(255, 255, 255);
@@ -130,28 +134,28 @@ main {
   color: #fff;
   font-weight: 400;
 }
-#right .customer-management {
+#right .customer-management, #right .worker-management, #right .equipment-management, #right .approved {
   height: 100vh;
   width: 100%;
 }
-#right .customer-management h1 {
+#right .customer-management h1, #right .worker-management h1, #right .equipment-management h1, #right .approved h1 {
   color: rgb(37, 37, 37);
   padding-top: 20px;
   padding-bottom: 40px;
 }
-#right .customer-management .search {
+#right .customer-management .search, #right .worker-management .search, #right .equipment-management .search, #right .approved .search {
   display: flex;
   align-items: center;
   font-weight: 600;
   color: rgb(49, 49, 49);
   margin-bottom: 10px;
 }
-#right .customer-management .search p {
+#right .customer-management .search p, #right .worker-management .search p, #right .equipment-management .search p, #right .approved .search p {
   margin-right: 10px;
   font-size: 20px;
   color: rgb(37, 37, 37);
 }
-#right .customer-management .search input {
+#right .customer-management .search input, #right .worker-management .search input, #right .equipment-management .search input, #right .approved .search input {
   padding: 10px 5px;
   border: none;
   background-color: rgb(197, 197, 197);
@@ -160,7 +164,7 @@ main {
   color: rgb(37, 37, 37);
   font-weight: 700;
 }
-#right .customer-management .search button {
+#right .customer-management .search button, #right .worker-management .search button, #right .equipment-management .search button, #right .approved .search button {
   padding: 10px 7px;
   border: none;
   background-color: rgb(224, 77, 9);
@@ -170,11 +174,11 @@ main {
   font-weight: 700;
   transition: 0.3s ease all;
 }
-#right .customer-management .search button:hover {
+#right .customer-management .search button:hover, #right .worker-management .search button:hover, #right .equipment-management .search button:hover, #right .approved .search button:hover {
   background-color: rgb(26, 223, 75);
   color: rgb(255, 255, 255);
 }
-#right .customer-management .table {
+#right .customer-management .table, #right .worker-management .table, #right .equipment-management .table, #right .approved .table {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -182,35 +186,37 @@ main {
   overflow-y: scroll;
   border: 2px rgb(209, 209, 209) solid;
 }
-#right .customer-management .table table {
+#right .customer-management .table table, #right .worker-management .table table, #right .equipment-management .table table, #right .approved .table table {
   width: 100%;
   position: relative;
 }
-#right .customer-management .table table tr:nth-child(even) {
+#right .customer-management .table table tr:nth-child(even), #right .worker-management .table table tr:nth-child(even), #right .equipment-management .table table tr:nth-child(even), #right .approved .table table tr:nth-child(even) {
   background-color: #dddddd;
 }
-#right .customer-management .table table tr th {
+#right .customer-management .table table tr th, #right .worker-management .table table tr th, #right .equipment-management .table table tr th, #right .approved .table table tr th {
   background: rgb(65, 3, 236);
   padding: 10px;
   margin-bottom: 5px;
   color: #fff;
 }
-#right .customer-management .table table tr td {
+#right .customer-management .table table tr td, #right .worker-management .table table tr td, #right .equipment-management .table table tr td, #right .approved .table table tr td {
   padding: 10px;
   text-align: center;
 }
-#right .customer-management .table table tr td button {
+#right .customer-management .table table tr td button, #right .worker-management .table table tr td button, #right .equipment-management .table table tr td button, #right .approved .table table tr td button {
   background-color: rgb(0, 0, 0);
   padding: 6px;
   border-radius: 4px;
   border: none;
   transition: 0.3s ease all;
   color: #fff;
+  margin: auto 5px;
+  cursor: pointer;
 }
-#right .customer-management .table table tr td button:hover {
+#right .customer-management .table table tr td button:hover, #right .worker-management .table table tr td button:hover, #right .equipment-management .table table tr td button:hover, #right .approved .table table tr td button:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(230, 102, 18);
 }
-#right .customer-management .table::-webkit-scrollbar {
+#right .customer-management .table::-webkit-scrollbar, #right .worker-management .table::-webkit-scrollbar, #right .equipment-management .table::-webkit-scrollbar, #right .approved .table::-webkit-scrollbar {
   display: none;
 }/*# sourceMappingURL=style.css.map */

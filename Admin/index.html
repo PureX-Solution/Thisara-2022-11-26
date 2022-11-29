@@ -3,6 +3,7 @@
 <head>
     <title>Admin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
     <main>
@@ -10,12 +11,12 @@
             <h3>New National <span>Rentals</span> <br></h3>
             
             <ul>
-                <li>Dashboard</li>
-                <li>Customer Management</li>
-                <li>Worker Management</li>
-                <li>Equipment Management</li>
-                <li>Approved</li>
-                <li>Log Out</li>
+                <li><span class="navigation_icon"><i class="fa-solid fa-gauge"></i></span> Dashboard</li>
+                <li><span class="navigation_icon"><i class="fa-solid fa-user"></i></span>Customer Management</li>
+                <li><span class="navigation_icon"><i class="fa-solid fa-users"></i></span>Worker Management</li>
+                <li><span class="navigation_icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>Equipment Management</li>
+                <li><span class="navigation_icon"><i class="fa-solid fa-person-circle-check"></i></span>Approval</li>
+                <li><span class="navigation_icon"><i class="fa-solid fa-right-from-bracket"></i></span>Log Out</li>
 
             </ul>
         </div><!--left-->
@@ -53,8 +54,8 @@
 
                 <div class="search">
                     <p>Search ID  </p>
-                    <input type="text" onchange="searching()" placeholder="Enter Customer ID">
-                    <button>Search</button>
+                    <input type="text" id="customer_management_id" placeholder="Enter Customer ID">
+                    <button onclick="customer_management_searching()">Search</button>
                 </div>
 
                 <div class="table">
@@ -67,9 +68,58 @@
                         </tr>
 
 
-                        <tr  style="">
+                        <tr class="" id="">
                             <td>1</td>
                             <td>Ushan</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="" id="">
+                            <td>2</td>
+                            <td>Akila</td>
                             <td>0716654153</td>
                             <td><button>View</button></td>
                         </tr>
@@ -78,12 +128,150 @@
                     </table>
                 </div>
             </div><!--customer-management-->
+            
+            <div class="worker-management" id="worker-management">
+                <h1>Worker Management</h1>
+
+                <div class="search">
+                    <p>Search ID  </p>
+                    <input type="text" id="customer_management_id" placeholder="Enter Customer ID">
+                    <button onclick="">Search</button>
+                </div>
+
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Worker ID</th>
+                            <th>Name</th>
+                            <th>Work Type</th>
+                            <th>Details</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>Ushan</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        
+                        
+                    </table>
+                </div>
+            </div><!--worker-management-->
+            
+            <div class="equipment-management" id="equipment-management">
+                <h1>Equipment Management</h1>
+
+                <div class="search">
+                    <p>Search ID  </p>
+                    <input type="text" id="customer_management_id" placeholder="Enter Customer ID">
+                    <button onclick="">Search</button>
+                </div>
+
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Equipment ID</th>
+                            <th>Equipment Name</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Details</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>Ushan</td>
+                            <td>0716654153</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>Akila</td>
+                            <td>0716654153</td>
+                            <td>0716654153</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        
+                        
+                    </table>
+                </div>
+            </div><!--Equipment-management-->
+            
+            <div class="approved" id="approved">
+                <h1>Approved</h1>
+
+                <h3 style="padding-bottom:7px;">Worker Approved</h3>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Worker ID</th>
+                            <th>Worker Name</th>
+                            <th>Customer Name</th>
+                            <th>Dates</th>
+                            <th>Approval</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>Ushan</td>
+                            <td>0716654153</td>
+                            <td>0716654153</td>
+                            <td><button style="background-color: rgb(105, 216, 105);">Approved</button><button style="background-color: rgb(196, 51, 51);">Reject</button></td>
+                        </tr>
+   
+                    </table>
+
+                    </div>
+                    
+                    <h3 style="padding:30px 0px; padding-bottom: 10px; ">Equipment Approved</h3>
+                    
+                    <div class="table">
+                    <table>
+                        <tr>
+                            <th>Equipment Name</th>
+                            <th>Equipment Name</th>
+                            <th>Dates</th>
+                            <th>Equipment Qty</th>
+                            <th>Price</th>
+                            <th>Approval</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>1</td>
+                            <td>Ushan</td>
+                            <td>0716654153</td>
+                            <td>0716654153</td>
+                            <td>0716654153</td>
+                            <td><button style="background-color: rgb(105, 216, 105);">Approved</button><button style="background-color: rgb(196, 51, 51);">Reject</button></td>
+                        </tr>
+   
+                    </table>
+                </div>
+            </div><!--Equipment-management-->
         </div><!--right-->
     </main>
 
 <script>
-    function searching(){
-        console.log("changing...");
+    function customer_management_searching(){
+        let data = document.getElementById("customer_management_id").value;
+        let className = document.getElementsByClassName('customer_management');
+        for(let index = 0; index < className.length; index++){
+            if(className[index] )
+            className[index].style = "display : none;";  
+        }          
     }
 </script>
 </body>

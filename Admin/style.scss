@@ -81,7 +81,7 @@ main{
             font-size: 16px;
             margin: 5px;
             padding: 5px 15px;
-            height: 60px;
+            height: 50px;
             // justify-content: center;
             align-items: center;
             border-radius: 7px;
@@ -89,6 +89,11 @@ main{
             cursor: pointer;
             transition: 0.2s ease all;
             font-weight: bold;
+
+            span{
+                padding-right: 15px;
+                font-size: 17px;
+            }
         }
 
         li:hover{
@@ -155,7 +160,7 @@ main{
         }
     }
 
-   .customer-management{
+   .customer-management, .worker-management, .equipment-management, .approved{
     height: 100vh;
     width: 100%;
 
@@ -240,6 +245,8 @@ main{
                         border: none;
                         transition: 0.3s ease all;
                         color: #fff;
+                        margin: auto 5px;
+                        cursor: pointer;
                     }
                     button:hover{
                         color: rgb(255, 255, 255);
