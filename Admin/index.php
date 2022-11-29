@@ -1,5 +1,15 @@
 <?php require './components/connection.php'; ?>
 
+<?php session_start(); ?>
+
+<?php
+
+if(!isset($_SESSION['email'])){
+    header("Location: ./pages/authentication/Client/login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +32,7 @@
 
                 <a href="#approved"><span class="navigation_icon"><i class="fa-solid fa-person-circle-check"></i></span>Approval</a>
 
-                <a href="#"><span class="navigation_icon"><i class="fa-solid fa-right-from-bracket"></i></span>Log Out</a>
+                <a href="./pages/authentication/Backend/logout.php"><span class="navigation_icon"><i class="fa-solid fa-right-from-bracket"></i></span>Log Out</a>
             </ul>
         </div><!--left-->
 
