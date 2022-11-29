@@ -62,7 +62,7 @@
 
             echo "<div class='col-md-4'>";
 
-            echo "<img src='{$record['w_image']}' class='img-fluid rounded-start' style='width: 250px; height:250px;' />";
+            echo "<img src='../../Admin/img/user_image/{$record['w_image']}' class='img-fluid rounded-start' style='width: 250px; height:250px;' />";
 
             echo "</div>";
 

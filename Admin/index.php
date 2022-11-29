@@ -159,7 +159,7 @@ if(!isset($_SESSION['email'])){
                         <tr>
                             <th>Worker ID</th>
                             <th>Name</th>
-                            <th>Work Type</th>
+                            <th>Phone NO.</th>
                             <th>Details</th>
                         </tr>
 

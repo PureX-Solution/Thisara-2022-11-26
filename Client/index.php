@@ -55,7 +55,7 @@ session_start();
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">New National Rentals</a></h1>
+        <h1><a href="#">New National Rentals</a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
