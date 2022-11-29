@@ -9,13 +9,14 @@ if(!$_SESSION["email"]){
 else{
   if(! $_GET["howMany"] and $_GET["Worker_id"]){
       header("Location: ../index.php?msg=updateFailed");
+
   }
   else{
       $num_date = $_GET["howMany"];
       $worker_id = $_GET["Worker_id"];
   
       // Update worker state
-      $sql = "UPDATE workers SET `availability`='0' WHERE 1";
+      $sql = "UPDATE workers SET `availability`='0' WHERE w_id='$worker_id'";
       
       if (mysqli_query($con,$sql) === TRUE) {
           echo "success";

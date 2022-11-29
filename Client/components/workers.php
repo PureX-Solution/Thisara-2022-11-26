@@ -2,49 +2,42 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Worker</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Favicons -->
+  <title>Workers</title>
+
+
+  <!-- Favicons -->
   <link href="../assets/img/logo.png" rel="icon">
   
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
-  
 
-    <link rel="stylesheet" type="text/css" href="../static/css/chat.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="../style.css">
-  </head>
+
+</head>
   <body style="background: #eee">
-    <?php require './nav.php' ?>
+  <header id="header" class="fixed-top d-flex align-items-center  header-black ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="#">New National Rentals</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="../../client">Home</a></li>
+      </nav>
+<!-- .navbar -->
+</div>
+</header><!-- End Header -->
     <h1 style="text-align: center; width: 100%; padding:20px; margin-top:100px"><?php echo ucfirst($_GET['type']); ?></h1>
 
     <?php

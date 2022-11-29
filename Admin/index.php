@@ -20,7 +20,7 @@ if(!isset($_SESSION['email'])){
 <body>
     <main>
         <div id="left">
-            <h3>New National <span>Rentals</span> <br></h3>
+            <h3><img src="./img/icon/logo.png" style="width: 40px"> New National <span>Rentals</span> <br></h3>
             <ul>
                 <a href="#dashboard"><span class="navigation_icon"><i class="fa-solid fa-gauge"></i></span> Dashboard</a>
 

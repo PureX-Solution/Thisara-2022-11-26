@@ -41,11 +41,6 @@ session_start();
     
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <style>
-      #userName:hover{
-
-      }
-    </style>
 </head>
 <body>
 
@@ -100,7 +95,7 @@ session_start();
       <li class="dropdown"><a href="#startOfPricing"><span>Workers</span><i class="bi bi-chevron-down"></i></a>
       
 		<ul>
-			<li><a class="nav-link scrollto" href="./components/workers.php?type=carpenter">Carpenters</a></li>
+			<li><a class="nav-link scrollto" href="./components/workers.php?type=carpenters">Carpenters</a></li>
 			<li><a class="nav-link scrollto" href="./components/workers.php?type=mason">Mason</a></li>
 			<li><a class="nav-link scrollto" href="./components/workers.php?type=digging_Work">Digging Work</a></li>
 			<li><a class="nav-link scrollto" href="./components/workers.php?type=glazier">Glazier</a></li>
@@ -350,24 +345,24 @@ When a piece of critical equipment or power system breaks down, or you come up a
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-tools" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Rent Tools & Machines</a></h4>
-              <p class="description"> Our global network offers the largest construction equipment rental fleet in Sri Lanka.</p>
+              <div class="icon"><i class="bi bi-tools" style="color: #e9bf06; margin-left: 35px; font-size: 50px"></i></div>
+              <h4 class="title" style="margin-left: 55px"><a href="">Rent Tools & Machines</a></h4>
+              <p class="description" style="margin-left: 50px"> Our global network offers the largest construction equipment rental fleet in Sri Lanka.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-card-list" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Rent Construction Accessories</a></h4>
-              <p class="description">The New national rentals Store has everything you require in a single, convenient place.</p>
+              <div class="icon"><i class="bi bi-card-list" style="color: #e9bf06; margin-left: 35px; font-size: 50px"></i></div>
+              <h4 class="title" style="margin-left: 55px"><a href="">Rent Construction Accessories</a></h4>
+              <p class="description" style="margin-left: 50px">The New national rentals Store has everything you require in a single, convenient place.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-         <div class="icon"><i class="bi bi-briefcase" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Worker Advertisements</a></h4>
-              <p class="description">We have provided a simple and quick solution for customers to locate services/providers and for service providers who have a relatively low capacity on promoting their services.</p>
+         <div class="icon"><i class="bi bi-briefcase" style="color: #e9bf06; margin-left: 35px; font-size: 50px"></i></div>
+              <h4 class="title" style="margin-left: 55px"><a href="">Worker Advertisements</a></h4>
+              <p class="description" style="margin-left: 50px">We have provided a simple and quick solution for customers to locate services/providers and for service providers who have a relatively low capacity on promoting their services.</p>
             </div>
           </div>
           
@@ -504,7 +499,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
                       echo "<div class='btn-wrap'>";
 
                         echo "<form action='./components/allocate-worker.php' method='GET' id='myForm' name='myForm' style='display: flex; justify-content: space-between;'>";
-                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' require min='1' style='width: 50px;'>";
+                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' value='' require min='1' style='width: 50px;'>";
                           echo "<input type='number'  name='Worker_id' value='{$record['w_id']}' require style='display: none'>";
                           // echo "<button style='border:none; width: 110px;' class='btn-buy' type='button' name='submitBtn' onclick='submitForm({$record['w_id']})' name='{$record['w_id']}'>Hires</button>";
                           echo "<button style='border:none; width: 110px;' class='btn-buy' type='submit'>Hires</button>";
@@ -542,7 +537,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
             $i = 0;
             while ($record = mysqli_fetch_assoc($result)){
               if($record['availability'] === "1"){
-                if(!$i<4){
+                if($i>4){
                   break;
                 }
                   echo "<div class='col-lg-3 col-md-6' style='margin-bottom: 25px;'>";
@@ -556,7 +551,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
                       echo "<div class='btn-wrap'>";
 
                         echo "<form action='./components/allocate-worker.php' id='myForm' name='myForm' style='display: flex; justify-content: space-between;'>";
-                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' require min='1' style='width: 50px;'>";
+                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' value='' require min='1' style='width: 50px;'>";
                           echo "<input type='number'  name='Worker_id' value='{$record['w_id']}' require style='display: none'>";
                           echo "<button style='border:none; width: 110px;' class='btn-buy' type='button' name='submitBtn' onclick='submitForm({$record['w_id']})' name='{$record['w_id']}'>Hires</button>";
                         echo "</form>";
@@ -593,7 +588,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
             $i = 0;
             while ($record = mysqli_fetch_assoc($result)){
               if($record['availability'] === "1"){
-                if(!$i<4){
+                if($i>4){
                   break;
                 }
                   echo "<div class='col-lg-3 col-md-6' style='margin-bottom: 25px;'>";
@@ -607,7 +602,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
                       echo "<div class='btn-wrap'>";
 
                         echo "<form action='./components/allocate-worker.php' id='myForm' name='myForm' style='display: flex; justify-content: space-between;'>";
-                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' require min='1' style='width: 50px;'>";
+                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' value='' require min='1' style='width: 50px;'>";
                           echo "<input type='number'  name='Worker_id' value='{$record['w_id']}' require style='display: none'>";
                           echo "<button style='border:none; width: 110px;' class='btn-buy' type='button' name='submitBtn' onclick='submitForm({$record['w_id']})' name='{$record['w_id']}'>Hires</button>";
                         echo "</form>";
@@ -644,7 +639,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
             $i = 0;
             while ($record = mysqli_fetch_assoc($result)){
               if($record['availability'] === "1"){
-                if(!$i<4){
+                if($i>4){
                   break;
                 }
                   echo "<div class='col-lg-3 col-md-6' style='margin-bottom: 25px;'>";
@@ -658,7 +653,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
                       echo "<div class='btn-wrap'>";
 
                         echo "<form action='./components/allocate-worker.php' id='myForm' name='myForm' style='display: flex; justify-content: space-between;'>";
-                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' require min='1' style='width: 50px;'>";
+                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' value='' name='howMany' require min='1' style='width: 50px;'>";
                           echo "<input type='number'  name='Worker_id' value='{$record['w_id']}' require style='display: none'>";
                           echo "<button style='border:none; width: 110px;' class='btn-buy' type='button' name='submitBtn' onclick='submitForm({$record['w_id']})' name='{$record['w_id']}'>Hires</button>";
                         echo "</form>";
@@ -709,7 +704,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
                       echo "<div class='btn-wrap'>";
 
                         echo "<form action='./components/allocate-worker.php' id='myForm' name='myForm' style='display: flex; justify-content: space-between;'>";
-                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' require min='1' style='width: 50px;'>";
+                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' name='howMany' value='' require min='1' style='width: 50px;'>";
                           echo "<input type='number'  name='Worker_id' value='{$record['w_id']}' require style='display: none'>";
                           echo "<button style='border:none; width: 110px;' class='btn-buy' type='button' name='submitBtn' onclick='submitForm({$record['w_id']})' name='{$record['w_id']}'>Hires</button>";
                         echo "</form>";
@@ -760,7 +755,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
                       echo "<div class='btn-wrap'>";
 
                         echo "<form action='./components/allocate-worker.php' id='myForm' name='myForm' style='display: flex; justify-content: space-between;'>";
-                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' value='1' name='howMany' require min='1' style='width: 50px;'>";
+                          echo "<label>Date : </label> <input type='number' id='{$record['w_id']}' value='1' name='howMany' value='' require min='1' style='width: 50px;'>";
                           echo "<input type='number'  name='Worker_id' value='{$record['w_id']}' require style='display: none'>";
                           echo "<button style='border:none; width: 110px;' class='btn-buy' type='button' name='submitBtn' onclick='submitForm({$record['w_id']})' name='{$record['w_id']}'>Hires</button>";
                         echo "</form>";

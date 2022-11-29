@@ -223,21 +223,11 @@
           }
         }
 
-        // if(agreement.length == 0){
-          
-        //   return false;
-        // }else{
-        //   document.getElementById("passwordRequire").style="visibility: hidden;"
-        // }
 
         agreement.checked ? document.getElementById("myForm").submit() : (
           checkBoxText.style="color:red; visibility: visible;"
         );
-          
 
-          // document.getElementById("myForm").submit();
-          // console.log("Submited..");
-          // console.log(agreement.checked);
 
       }
     </script>

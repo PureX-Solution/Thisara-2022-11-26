@@ -45,7 +45,20 @@
   </head>
 
   <body style="background: #eee">
-    <?php require './nav.php' ?>
+    <header id="header" class="fixed-top d-flex align-items-center  header-black ">
+      <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="#">New National Rentals</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="../../client">Home</a></li>
+      </nav>
+      <!-- .navbar -->
+    </div>
+    </header><!-- End Header -->
     <h1 style="text-align: center; width: 100%; padding:20px; margin-top:100px"><?php echo ucfirst($_GET['name']); ?></h1>
 
     <?php
