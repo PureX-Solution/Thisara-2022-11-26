@@ -71,6 +71,8 @@
                             <th>Phone Number</th>
                             <th>Details</th>
                         </tr>
+
+                        <script>let customer_management_data = [];</script>
                         
                         <?php
                             $sql = "SELECT * FROM customers";
@@ -81,11 +83,20 @@
 
                             ?>
 
+
                             <tr class="customerClass <?php echo $record['c_id'] ?>" id="<?php echo $record['c_id'] ?>">
                                 <td><?php echo $record['c_id'] ?></td>
                                 <td><?php echo $record['c_fName'] ?></td>
                                 <td><?php echo $record['c_contact_number'] ?></td>
-                                <td><button>View</button></td>
+                                <td><button onclick="showAlert([
+                                    ['Customer ID','<?php echo $record['c_id'] ?>'],
+                                    ['Customer Name', '<?php echo $record['c_fName'] ?>'],
+                                    ['Contact Number','<?php echo $record['c_contact_number'] ?>'],
+                                    ['Customer Address', '<?php echo $record['c_address'] ?>'],
+                                    ['Customer Email', '<?php echo $record['c_email'] ?>'],
+                                    ['Customer NIC', '<?php echo $record['c_nic'] ?>']                    
+                                    ])">View</button></td>
+                                <!-- customer ID, customer name, customer contact number, customer address  -->
                             </tr>
                                 
                             <?php
@@ -132,7 +143,18 @@
                                 <td><?php echo $record['w_id'] ?></td>
                                 <td><?php echo $record['w_name'] ?></td>
                                 <td><?php echo $record['w_contact_number'] ?></td>
-                                <td><button>View</button></td>
+                                <td><button onclick="showAlert([
+
+                                    ['ID','<?php echo $record['w_id'] ?>'],
+                                    ['Name','<?php echo $record['w_name'] ?>'],
+                                    ['Phone','<?php echo $record['w_contact_number'] ?>'],
+                                    ['Address','<?php echo $record['w_address'] ?>'],
+                                    ['Type','<?php echo $record['w_type'] ?>'],
+                                    ['Description','<?php echo $record['w_description'] ?>'],
+                                    ['Status','<?php echo $record['availability'] ?>'],
+                                    ['Price','<?php echo $record['w_price'] ?>'],
+
+                                ])">View</button></td>
 
                             </tr>
                                 
@@ -190,7 +212,14 @@
                                 <td><?php echo $record['e_type'] ?></td>
                                 <td><?php echo $record['e_qty'] ?></td>
                                 <td><?php echo $record['available_count'] ?></td>
-                                <td><button>View</button></td>
+                                <td><button onclick="showAlert([
+                                    ['ID','<?php echo $record['e_id'] ?>'],
+                                    ['Name','<?php echo $record['e_name'] ?>'],
+                                    ['Type','<?php echo $record['e_type'] ?>'],
+                                    ['Price','<?php echo $record['e_price'] ?>'],
+                                    ['Quantity','<?php echo $record['e_qty'] ?>'],
+                                    ['Available','<?php echo $record['available_count'] ?>'],
+                                ])">View</button></td>
 
                             </tr>
                                 
@@ -305,14 +334,30 @@
                                 }
                             }
                         ?>
-
-
-   
                     </table>
                 </div>
             </div><!--Equipment-management-->
         </div><!--right-->
-    </main>
+    </main><!---->
+
+    <div id="alert">
+        <div class="card">
+            <div class="close">
+                <i class="fa-solid fa-circle-xmark" onclick="closeAlert()"></i>
+            </div>
+
+            <div class="title">
+                <h1 id="title">This is Title</h1>
+            </div><!--title-->
+
+            <div class="detail">
+                <table id='table'>
+                    
+
+                </table>
+            </div>
+        </div>
+    </div>
 
 <script src="./main.js"></script>
 </body>

@@ -8,7 +8,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Track */
@@ -270,4 +270,104 @@ main{
       }
    } 
     
+}
+
+// Alert Common Style
+#alert{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card::-webkit-scrollbar {
+        display: none;
+      }
+   
+
+    .card{
+        // width: 300px;
+        background-color: #fff;
+        width: fit-content;
+        height: fit-content;
+        min-width: 350px;
+        max-height: 80%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding: 10px;
+        position: relative;
+        border-radius: 7px;
+        box-sizing: content-box;
+        padding-bottom: 20px;
+
+        .close{
+            // background-color: #555;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 5px;
+            i{
+                // float: right;
+
+                font-size: 25px;
+                padding-top: 5px;
+                padding-right: 5px;
+                color: rgb(255, 55, 55);
+                cursor: pointer;
+            }
+            i:hover{
+                color: red;
+            }
+        }
+
+        .title{
+            text-align: center;
+            padding: 10px;
+            padding-top: 0;
+
+            h1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                color: rgb(37, 37, 37);
+            }
+        }
+        
+        .detail{
+            // background-color: blue;
+            padding: 5px;
+            max-height: 400px;
+            overflow-y: scroll;
+
+            table{
+                width: 100%;
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                border: 1px rgb(207, 206, 206) solid;
+                border-radius: 5px;
+
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+
+                tr{
+                    td{
+                        padding: 15px 30px;
+                        font-size: 17px;
+                        font-weight: 500;
+                        color: rgb(20, 20, 20);
+                        text-align: left;
+                    }
+
+                    .firstTD{
+                        border-right: 1px rgb(207, 206, 206) solid;
+                    }
+                }
+                
+
+
+            }
+        }
+    }
 }

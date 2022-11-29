@@ -47,4 +47,27 @@ equipment_management_input.addEventListener('input', (event)=>{
             equipment_management_class_name[x].style =  "display : display;";
         }
     }
-})
+});
+
+// Close Alert
+function closeAlert(){
+    document.getElementById("alert").style="display: none";
+}
+
+// Show Alert
+function showAlert(arr){
+
+    let fullCreate = ``;
+
+    for(tag of arr){
+        let create = `<tr><td>${tag[0]}</td><td>${tag[1]}</td></tr>`;
+        
+        fullCreate = fullCreate + create;
+        
+        document.getElementById("table").innerHTML = fullCreate;
+    }
+
+    document.getElementById("alert").style="display: flex";
+}
+
+
