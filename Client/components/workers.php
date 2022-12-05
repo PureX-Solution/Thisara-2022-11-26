@@ -33,7 +33,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="../../client">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../client/#<?php echo $_GET['type']; ?>">Home</a></li>
       </nav>
 <!-- .navbar -->
 </div>
@@ -69,7 +69,7 @@
 
             echo "<h1 style='color:rgb(244,112,17)'><sup>RS.</sup>{$record['w_price']}<span style='color:#434242; font-size:20px'>/day</span></h1>";
 
-            echo "<button type='button' class='btn btn-primary'>Hires ", ucfirst($record['w_name']), " </button>";
+            echo "<a href='../../client/#{$_GET['type']}'><button type='button' class='btn btn-primary'>Hires ", ucfirst($record['w_name']), " </button></a>";
 
             echo "</div>";
 
@@ -88,24 +88,6 @@
 
     ?>
     
-
-    <!-- <div id="container" style="display:flex; width: 100%; flex-direction: row; justify-content: center">
-      <div class="card mb-3" style="width: 75%; height: fit-content">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." style="width: 250px; height:250px;" />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting</p>
-              <p class="card-text"><small class="text-muted">Status</small></p>
-              <h2 style='color:rgb(244,112,17)'><sup>RS.</sup>1500 <span style='color:#434242; font-size:20px'>/day</span></h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

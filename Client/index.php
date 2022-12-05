@@ -135,6 +135,9 @@ session_start();
             echo "<div id='cartContainer' onmouseleave='closeCartList()' style=' position: absolute; top: 51px; right: -30px; padding: 10px; background-color: rgb(241, 241, 241);; width: 60vw; height: fit-content; border-radius: 8px 0 0 8px; display: flex; align-items: center; justify-content: center; display: none'>";
             echo "<table style='width: 100%; font-family: arial; border-collapse: collapse;'>";
 
+            $total_approved_price_worker_and_equipment = 0;
+            $total_price_worker_and_equipment = 0;
+
             $total_item_is_empty = FALSE;
 
             // FROM sell_item DATABASE
@@ -155,9 +158,12 @@ session_start();
                   echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px; color:#000; cursor: pointer'>{$record2['e_name']} ({$record1['item_qty']})</td>";
                   
                   $totalPrice = ((int)$record1['item_qty'])*($record2['e_price'])*((int)$record1['How_many_date']);
+                  $total_price_worker_and_equipment = $total_price_worker_and_equipment + $totalPrice;
+                  
                   echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px; color:#000; cursor: pointer'>RS. {$totalPrice}</td>";
                   
                   if($record1['approval'] === 'Approved'){
+                    $total_approved_price_worker_and_equipment = $total_approved_price_worker_and_equipment + ((int)$totalPrice);
                     echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px; color:green; cursor: pointer'>{$record1['approval']}</td>";
                   }
                   else{
@@ -198,9 +204,11 @@ session_start();
                   echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px; color:#000; cursor: pointer'>{$record2['w_name']}</td>";
                   
                   $totalPrice = $record1['how_many_date']*$record2['w_price'];
+                  $total_price_worker_and_equipment = $total_price_worker_and_equipment + $totalPrice;
                   echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px; color:#000; cursor: pointer'>RS. {$totalPrice}</td>";
                   
                   if($record1['approval'] === 'Approved'){
+                    $total_approved_price_worker_and_equipment = $total_approved_price_worker_and_equipment + ((int)$totalPrice);
                     echo "<td style='text-align: left; padding: 5px; padding-bottom: 5px; color:green; cursor: pointer'>{$record1['approval']}</td>";
                   }
                   else{
@@ -215,6 +223,7 @@ session_start();
                   }
                   echo "</tr>";
                 }
+                
               }
             }
             else{
@@ -224,7 +233,13 @@ session_start();
             if($total_worker_is_empty == TRUE and $total_item_is_empty == TRUE){
               echo "<h2 style='text-align: center; padding: 20px'>All empty</h2>";
             }
-      
+            else{
+              echo "<h6 style='color: #DC3535; padding-top: 5px'>Total Price : Rs. {$total_price_worker_and_equipment}</h6>";
+              echo "<hr>";
+              echo "<h6 style='color: #DC3535; padding-top: 0px'>Total Price<span style='font-size: 0px'> (Approved)</span>  : Rs. {$total_approved_price_worker_and_equipment}</h6>";
+              echo "<hr>";
+            }
+            
             echo "</table>";
             echo "</div>";
           }
@@ -470,7 +485,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
      
     <!--#################-->
     <section id="pricing" class="pricing">
-      <div class="container">
+      <div class="container" id="electricians">
         <div class="section-title" data-aos="zoom-out">
           <h2>Find Workers</h2>
           <p>Electricians</p>
@@ -522,7 +537,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
       <div style='height: 80px'></div>
 
       <!-- carpenters -->
-      <div class="container">
+      <div class="container" id="carpenters">
         <div class="section-title" data-aos="zoom-out">
           <h2>Find Workers</h2>
           <p>Carpenters</p>
@@ -573,7 +588,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
       <div style='height: 80px'></div>
 
       <!-- mason -->
-      <div class="container">
+      <div class="container" id="mason">
         <div class="section-title" data-aos="zoom-out">
           <h2>Find Workers</h2>
           <p>Mason</p>
@@ -624,7 +639,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
       <div style='height: 80px'></div>
       
       <!-- digging_Work -->
-      <div class="container">
+      <div class="container" id="digging_Work">
         <div class="section-title" data-aos="zoom-out">
           <h2>Find Workers</h2>
           <p>Digging Work</p>
@@ -675,7 +690,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
       <div style='height: 80px'></div>
       
       <!-- glazier -->
-      <div class="container">
+      <div class="container" id="glazier">
         <div class="section-title" data-aos="zoom-out">
           <h2>Find Workers</h2>
           <p>Glazier</p>
@@ -726,7 +741,7 @@ When a piece of critical equipment or power system breaks down, or you come up a
       <div style='height: 80px'></div>
      
       <!-- backhoe_Driver -->
-      <div class="container">
+      <div class="container" id="backhoe_Driver">
         <div class="section-title" data-aos="zoom-out">
           <h2>Find Workers</h2>
           <p>Backhoe Driver</p>

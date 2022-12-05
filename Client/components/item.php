@@ -54,7 +54,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="../../client">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../client/#portfolio">Home</a></li>
       </nav>
       <!-- .navbar -->
     </div>
@@ -90,7 +90,7 @@
 
             echo "<h1 style='color:rgb(244,112,17)'><sup>RS.</sup>{$record['e_price']}<span style='color:#434242; font-size:20px'>/day</span></h1>";
 
-            echo "<button type='button' class='btn btn-primary' style='margin: 20px 0px'> RENT </button>";
+            echo "<a href='../../client/#portfolio'><button type='button' class='btn btn-primary' style='margin: 20px 0px'> RENT </button></a>";
 
             echo "</div>";
 
