@@ -79,7 +79,7 @@ if(!isset($_SESSION['email'])){
                     
                     <div class="card">
                         <?php
-                            $sql = "SELECT * FROM equipments";
+                            $sql = "SELECT * FROM equipments_description";
                             $result = mysqli_query($con, $sql);
                             $count = mysqli_num_rows($result);
                         ?>
@@ -190,7 +190,16 @@ if(!isset($_SESSION['email'])){
                                     ['Status','<?php echo $record['availability'] ?>'],
                                     ['Price','<?php echo $record['w_price'] ?>'],
 
-                                ])">View</button></td>
+                                ])">View</button>
+                                <?php 
+                                    if($record['availability'] === "1"){
+                                        echo "<a href='./components/worker_edit/edit_worker.php?id={$record['w_id']}'><button style='background-color: green'>Edit</button></a>";
+                                    }else{
+                                        echo "<button style='background-color: gray'>Edit</button>";
+                                    }
+                                
+                                ?>
+                                </td>
 
                             </tr>
                                 
@@ -389,11 +398,11 @@ if(!isset($_SESSION['email'])){
             <div class="detail">
                 <table id='table'>
                     
-
                 </table>
             </div>
         </div>
     </div>
+    
 
 <script src="./main.js"></script>
 </body>

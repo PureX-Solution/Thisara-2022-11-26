@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#worker_edit {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: rgb(243, 243, 243);
+}
+#worker_edit h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  color: rgb(255, 123, 0);
+}
+#worker_edit form {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 15px;
+  overflow: auto;
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+#worker_edit form table td {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+#worker_edit form table input {
+  padding: 3px;
+  font-size: 17px;
+}
+#worker_edit form table input[type=submit] {
+  padding: 7px;
+  border: none;
+  background-color: rgb(0, 174, 255);
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+#worker_edit form table input[type=submit]:hover {
+  background-color: rgb(42, 11, 219);
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
